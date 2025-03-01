@@ -1,0 +1,78 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #282c34;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    transition: background-color 2s ease;
+}
+
+.container {
+    text-align: center;
+}
+
+#magicButton {
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #61dafb;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(97, 218, 251, 0.5);
+}
+
+#magicButton:hover {
+    background-color: #21a1f1;
+    box-shadow: 0 0 20px rgba(33, 161, 241, 0.8);
+}
+
+/* Estilo para os círculos gerados */
+.circle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ff6f61;
+    animation: explode 1s ease-out forwards;
+}
+
+/* Estilo para os textos flutuantes */
+.floating-text {
+    position: absolute;
+    font-size: 18px;
+    color: #fff;
+    animation: float 2s ease-out forwards;
+}
+
+@keyframes explode {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) scale(0.5);
+        opacity: 0;
+    }
+}
